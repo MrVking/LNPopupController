@@ -44,6 +44,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property(nullable, nonatomic, copy) NSArray<UIBarButtonItem*>* rightBarButtonItems;
 
+/*
+ *  A custom view to override the default LNPopupItem content.
+ */
+@property(nullable, nonatomic, strong) UIView *popupView;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -495,6 +495,11 @@ static CGFloat __smoothstep(CGFloat a, CGFloat b, CGFloat x)
 	[self _reconfigureBarItems];
 }
 
+- (void)_reconfigure_popupView
+{
+    [_popupBar addSubview:_currentPopupItem.popupView];
+}
+
 - (void)_popupItem:(LNPopupItem*)popupItem didChangeValueForKey:(NSString*)key
 {
 	NSString* reconfigureSelector = [NSString stringWithFormat:@"_reconfigure_%@", key];
@@ -533,7 +538,7 @@ static CGFloat __smoothstep(CGFloat a, CGFloat b, CGFloat x)
 		_currentContentController = newContentController;
 	}
 	
-	NSArray<NSString*>* keys = @[@"title", @"subtitle", @"progress", @"leftBarButtonItems"];
+	NSArray<NSString*>* keys = @[@"title", @"subtitle", @"progress", @"leftBarButtonItems", @"popupView"];
 	[keys enumerateObjectsUsingBlock:^(NSString * __nonnull key, NSUInteger idx, BOOL * __nonnull stop) {
 		[self _popupItem:_currentPopupItem didChangeValueForKey:key];
 	}];
