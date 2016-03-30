@@ -581,10 +581,10 @@ static CGFloat __smoothstep(CGFloat a, CGFloat b, CGFloat x)
 	_popupContentView.preservesSuperviewLayoutMargins = YES;
 	_popupContentView.contentView.preservesSuperviewLayoutMargins = YES;
 	
-	_popupContentView.popupCloseButton = [[LNPopupCloseButton alloc] initWithFrame: CGRectMake(0, 0, 0, 0)];
-	_popupContentView.popupCloseButton.clipsToBounds = YES;
-	[_popupContentView.popupCloseButton addTarget:self action:@selector(_closePopupContent) forControlEvents:UIControlEventTouchUpInside];
-	[_popupContentView.contentView addSubview:self.popupContentView.popupCloseButton];
+//	_popupContentView.popupCloseButton = [[LNPopupCloseButton alloc] initWithFrame: CGRectMake(0, 0, 0, 0)];
+//	_popupContentView.popupCloseButton.clipsToBounds = YES;
+//	[_popupContentView.popupCloseButton addTarget:self action:@selector(_closePopupContent) forControlEvents:UIControlEventTouchUpInside];
+//	[_popupContentView.contentView addSubview:self.popupContentView.popupCloseButton];
 	
 	self.popupContentView.popupInteractionGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(_popupBarPresentationByUserPanGestureHandler:)];
 	
